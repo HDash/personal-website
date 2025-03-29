@@ -15,7 +15,7 @@ export default function Socials() {
       >
         <Image
           className="dark:invert"
-          src={`/${icon}.svg`} // Path to the SVG in the public folder
+          src={`./${icon}.svg`} // Path to the SVG in the public folder
           alt={icon}
           width={17}
           height={17}
