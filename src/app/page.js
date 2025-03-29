@@ -7,7 +7,7 @@ import Education from "@/components/Education.js";
 
 export default function Home() {
   return (
-    <div className="lg:p-30 sm:p-10 p-8 lg:space-y-10 sm:space-y-8 space-y-6 min-w-100">
+    <div className="lg:p-30 sm:p-10 p-8 lg:space-y-10 sm:space-y-8 space-y-6 min-w-80">
       <Name />
       <Socials />
       <Summary />

@@ -27,7 +27,7 @@ export default function Skills() {
             </li>
             
             {hoveredSkill === skill && subSkills.length > 0 && (
-              <div className="absolute ml-2 left-70 top-0 shadow-md rounded-xl p-3 min-w-48 z-10 border dark:bg-gray-950 bg-white dark:border-gray-100 border-gray-500">
+              <div className="absolute ml-2 left-30 sm:left-70 top-0 shadow-md rounded-xl p-3 min-w-48 z-10 border dark:bg-gray-950 bg-white dark:border-gray-100 border-gray-500">
                 <p className="font-medium mb-1">{skill}</p>
                 {subSkills.length > 0 ? (
                   <ul className="list-disc list-inside">
