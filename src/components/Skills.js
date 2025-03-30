@@ -19,7 +19,7 @@ export default function Skills() {
             onMouseEnter={() => setHoveredSkill(skill)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <li className={`opacity-90 cursor-pointer ${subSkills.length > 0 ? 'hover:opacity-50 transition-colors' : ''}`}>
+            <li className="opacity-90 cursor-pointer hover:opacity-50">
               <span>{skill}</span>
               {subSkills.length > 0 && (
                 <span className="ml-1 text-xs text-gray-400"></span>

@@ -17,11 +17,11 @@ export const basicData = {
     ],
     "Biology": [
       "Genetics",
-      "Molecular Biology",
-      "Epigenetics",
       "Transcriptomics",
+      "Molecular Biology",
       "Biochemistry",
       "Structural Biology",
+      "Human Physiology",
     ],
     "Package & Software Development": [
       "R",

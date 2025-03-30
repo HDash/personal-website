@@ -13,7 +13,7 @@ export default function Education() {
           >
             <div className="flex flex-col">
               <div className="text-lg font-semibold">{edu.degree}</div>
-              <div className="text-sm font-bold opacity-80">{edu.institution}</div>
+              <div className="text-sm font-bold opacity-90 mb-1">{edu.institution}</div>
               <div className="text-sm opacity-80">{edu.location}</div>
               <div className="text-sm opacity-80">{edu.duration}</div>
             </div>
