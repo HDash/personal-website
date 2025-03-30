@@ -2,12 +2,13 @@ export const basicData = {
   bioName: "Hiranyamaya Dash",
   nickname: "Hiru",
   title: "Bioinformatician",
+  email: "h.dash@imperial.ac.uk",
   links: {
     linkedin: "https://www.linkedin.com/in/hdash/",
     github: "https://github.com/HDash",
     orcid: "https://orcid.org/0009-0005-5514-505X",
   },
-  summary: "Bioinformatician with expertise in genomic data analysis, epigenomics, and computational tool development. Proficient in R, Python, machine learning, and high-performance computing, with a strong focus on solving complex biological challenges. Passionate about leveraging data science, programming, and innovative technologies to advance research in genomics and molecular biology.",
+  summary: "I code and I solve biological problems. I build tools, analyse data, and make sense of complexity. If it’s new, I’ll learn it. If it’s broken, I’ll fix it. If it doesn’t exist, I’ll build it (and open source it).",
   skills: {
     "Bioinformatics & Data Science": [
       "Bioconductor (R package development)",
@@ -23,7 +24,7 @@ export const basicData = {
       "Structural Biology",
       "Human Physiology",
     ],
-    "Package & Software Development": [
+    "Software & Pipeline Development": [
       "R",
       "Python",
       "HTML",
@@ -37,6 +38,7 @@ export const basicData = {
       "React",
       "Next.js",
       "Tailwind CSS",
+      "FastAPI",
       "MongoDB",
     ],
     "Systems Administration & DevOps": [
@@ -48,6 +50,7 @@ export const basicData = {
     "Scientific Communication": [
       "Technical Writing",
       "Presentations & Collaboration",
+      "Mentorship & Training",
     ],
   },
 };

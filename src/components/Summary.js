@@ -6,7 +6,7 @@ export default function Summary() {
 
   return (
     <div>
-      <Subheading text="Profile Summary" />
+      {/* <Subheading text="Profile Summary" /> */}
       <div className="opacity-90">
         {summary}
       </div>
