@@ -1,5 +1,6 @@
 import { basicData } from "../data/basic";
 import Image from "next/image.js";
+import UseThis from "./UseThis";
 
 export default function Contact() {
   const { email } = basicData;
