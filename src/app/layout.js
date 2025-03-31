@@ -11,6 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Modify this to your liking
 export const metadata = {
   title: "HDash - Profile",
   description: "Hiranyamaya Dash (Hiru) – Bioinformatician dedicated to solving intricate biological problems through the development of open-source tools that drive scientific discovery.",
