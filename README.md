@@ -4,7 +4,7 @@
 
 A sleek, minimal, high-performance personal portfolio built with modern web technologies. While tailored to my profile, it can be easily customized for anyone seeking a professional online presence.
 
-<h4 align="center"> 🔗 [hdash.me](https://hdash.me) </h4>
+<h3 align="center"> 🔗 <a href="https://hdash.me">hdash.me</a></h3>
 
 ## Features
 - **Modern Stack** – React, Next.js, and TailwindCSS (v4) ensure performance and scalability.
