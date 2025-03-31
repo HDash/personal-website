@@ -19,6 +19,12 @@
   }
 }
 
+@layer base {
+  a {
+    color: inherit;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
