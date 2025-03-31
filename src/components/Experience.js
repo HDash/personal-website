@@ -8,7 +8,7 @@ export default function Experience() {
       <div>
         {experienceData.map((item, index) => (
           <div key={index} className="mb-4">
-            <div className="text-lg font-semibold">{item.title}</div>
+            <div className="text-lg font-bold">{item.title}</div>
             <div className="text-sm font-bold opacity-90 mb-1">{item.company}</div>
             <div className="text-sm opacity-80">{item.location}</div>
             <div className="text-sm opacity-80">{item.date}</div>

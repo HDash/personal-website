@@ -1,10 +1,10 @@
-import Socials from "@/components/Socials.js";
+import Socials from "../components/Socials.js";
 import Name from "../components/Name.js";
-import Summary from "@/components/Summary.js";
-import Skills from "@/components/Skills.js";
-import Experience from "@/components/Experience.js";
-import Education from "@/components/Education.js";
-import Contact from "@/components/Contact.js";
+import Summary from "../components/Summary.js";
+import Skills from "../components/Skills.js";
+import Experience from "../components/Experience.js";
+import Education from "../components/Education.js";
+import Contact from "../components/Contact.js";
 
 export default function Home() {
   return (

@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "HDash",
-  description: "Personal portfolio of Hiranyamaya Dash (Hiru)",
+  title: "HDash - Profile",
+  description: "Hiranyamaya Dash (Hiru) – Bioinformatician dedicated to solving intricate biological problems through the development of open-source tools that drive scientific discovery.",
 };
 
 export default function RootLayout({ children }) {

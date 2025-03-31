@@ -18,7 +18,7 @@ export default function Contact() {
             height={17}
           />
         </span>
-        <span className="font-semibold text-lg">Contact Me</span>
+        <span className="font-bold text-lg">Contact Me</span>
       </a>
     </>
   );

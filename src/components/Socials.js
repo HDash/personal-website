@@ -20,7 +20,7 @@ export default function Socials() {
           width={17}
           height={17}
         />
-        <span className="font-semibold">{text}</span>
+        <span className="font-bold">{text}</span>
       </a>
     );
   };
