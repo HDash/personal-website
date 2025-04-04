@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,17 +14,33 @@ const geistMono = Geist_Mono({
 
 // Modify this to your liking
 export const metadata = {
-  title: "HDash - Profile",
-  description: "Hiranyamaya Dash (Hiru) – Bioinformatician dedicated to solving intricate biological problems through the development of open-source tools that drive scientific discovery.",
-  metadataBase: new URL('https://www.hdash.dev'),
+  title: "Hiranyamaya Dash (Hiru) | Bioinformatician",
+  description:
+    "I code to decode biology. If it's broken, I fix it. If it doesn't exist, I build it — and open source it.",
+  metadataBase: new URL("https://www.hdash.dev"),
   alternates: {
     canonical: "/",
   },
 };
 
+// And this too
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "HDash - Profile",
+  alternateName: "HDash",
+  url: "https://www.hdash.dev",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
