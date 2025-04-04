@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "HDash - Profile",
   description: "Hiranyamaya Dash (Hiru) – Bioinformatician dedicated to solving intricate biological problems through the development of open-source tools that drive scientific discovery.",
+  metadataBase: new URL('https://www.hdash.dev'),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }) {
