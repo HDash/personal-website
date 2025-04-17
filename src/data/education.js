@@ -10,5 +10,5 @@ export const educationData = [
     institution: "University of Delhi",
     location: "Delhi, India",
     duration: "2020 - 2023",
-  }
-]
+  },
+];

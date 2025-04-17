@@ -10,5 +10,5 @@ export const experienceData = [
     company: "Indian Institute of Technology, Delhi (IITD)",
     location: "Delhi, India",
     date: "2022",
-  }
-]
+  },
+];

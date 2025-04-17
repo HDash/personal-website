@@ -6,6 +6,7 @@ import Experience from "../components/Experience.js";
 import Education from "../components/Education.js";
 import Contact from "../components/Contact.js";
 import UseThis from "../components/UseThis.js";
+import NotableProjects from "@/components/NotableProjects.js";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Education />
+      <NotableProjects />
 
       <hr className="opacity-10"/>
       <div className="space-y-5">
