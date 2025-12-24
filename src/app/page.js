@@ -6,7 +6,8 @@ import Experience from "../components/Experience.js";
 import Education from "../components/Education.js";
 import Contact from "../components/Contact.js";
 import UseThis from "../components/UseThis.js";
-import NotableProjects from "@/components/NotableProjects.js";
+import NotableProjects from "../components/NotableProjects.js";
+import Publications from "../components/Publications.js";
 
 export default function Home() {
   return (
@@ -15,8 +16,11 @@ export default function Home() {
       <Socials />
       <Summary />
       <Skills />
-      <Experience />
-      <Education />
+      <div className="grid lg:grid-cols-2 gap-5">
+        <Experience />
+        <Education />
+      </div>
+      <Publications />
       <NotableProjects />
 
       <hr className="opacity-10"/>
