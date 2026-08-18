@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Subheading from "./helpers/Subheading";
 import { basicData } from "../data/basic";
+import { fetchPublications } from "../lib/publications";
 
 export default function Publications() {
   const [publications, setPublications] = useState([]);
@@ -14,76 +15,22 @@ export default function Publications() {
   const orcidId = orcidUrl.split("/").pop();
 
   useEffect(() => {
-    async function fetchPublications() {
-      try {
-        const response = await fetch(
-          `https://pub.orcid.org/v3.0/${orcidId}/works`,
-          {
-            headers: {
-              Accept: "application/json",
-            },
-          }
-        );
+    let cancelled = false;
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch publications");
-        }
+    fetchPublications({ orcidId, mailto: basicData.email, limit: 5 })
+      .then((result) => {
+        if (!cancelled) setPublications(result);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
 
-        const data = await response.json();
-
-        // Extract and format publications
-        const works = data.group || [];
-        const formattedPublications = works
-          .map((work) => {
-            const workSummary = work["work-summary"]?.[0];
-            if (!workSummary) return null;
-
-            const title = workSummary.title?.title?.value || "Untitled";
-            const year = workSummary["publication-date"]?.year?.value || null;
-            const type = workSummary.type || null;
-            let journal = workSummary["journal-title"]?.value || null;
-
-            // If journal is null and type is "preprint", set journal to "Preprint"
-            if (!journal && type === "preprint") {
-              journal = "Preprint";
-            }
-
-            // Get external URL (DOI preferred)
-            let url = null;
-            const externalIds =
-              workSummary["external-ids"]?.["external-id"] || [];
-            const doi = externalIds.find(
-              (id) => id["external-id-type"] === "doi"
-            );
-            if (doi) {
-              url = `https://doi.org/${doi["external-id-value"]}`;
-            } else if (externalIds.length > 0) {
-              url = externalIds[0]["external-id-url"]?.value || null;
-            }
-
-            return {
-              title,
-              year,
-              journal,
-              type,
-              url,
-            };
-          })
-          .filter(Boolean)
-          // Sort by year (most recent first)
-          .sort((a, b) => (b.year || 0) - (a.year || 0))
-          // Take top 5
-          .slice(0, 5);
-
-        setPublications(formattedPublications);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchPublications();
+    return () => {
+      cancelled = true;
+    };
   }, [orcidId]);
 
   if (loading) {
@@ -117,8 +64,8 @@ export default function Publications() {
     <div>
       <Subheading text="Publications" />
       <div className="space-y-3">
-        {publications.map((pub, index) => (
-          <div key={index} className="flex flex-col">
+        {publications.map((pub) => (
+          <div key={pub.doi || pub.title} className="flex flex-col">
             {pub.url ? (
               <a
                 href={pub.url}
